@@ -1,198 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Mehta - Resume</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amit Mehta - Frontend Developer & Team Lead</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.3;
         }
 
         .container {
             max-width: 900px;
-            margin: 30px auto;
+            margin: 0 auto;
             background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 5px;
         }
 
         .header {
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 8px;
         }
 
         .header h1 {
-            font-size: 32px;
-            margin: 0;
-            font-weight: bold;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 2px;
         }
 
         .header p {
-            margin: 5px 0;
-            font-size: 14px;
+            font-size: 11px;
         }
 
         .main {
             display: flex;
-            padding: 20px;
+            padding: 8px;
+            gap: 8px;
         }
 
         .left-column {
-            width: 30%;
-            padding-right: 20px;
-            border-right: 2px solid #eee;
+            width: 35%;
+            padding-right: 5px;
+            border-right: 1px solid #eee;
         }
 
         .right-column {
-            width: 70%;
-            padding-left: 20px;
+            width: 65%;
+            padding-left: 5px;
         }
 
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 8px;
         }
 
         .section h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
+            font-size: 13px;
+            font-weight: 700;
             color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 2px;
+            margin-bottom: 4px;
         }
 
         .section h2::before {
-            margin-right: 10px;
-            font-size: 20px;
+            margin-right: 4px;
+            font-size: 13px;
             color: #555;
         }
 
-        .contact-info h2::before {
-            content: "📞";
-        }
-
-        .skills h2::before {
-            content: "💻";
-        }
-
-        .education h2::before {
-            content: "🎓";
-        }
-
-        .languages h2::before {
-            content: "🌍";
-        }
-
-        .interests h2::before {
-            content: "✨";
-        }
-
-        .career h2::before {
-            content: "🎯";
-        }
-
-        .experience h2::before {
-            content: "💼";
-        }
-
-        .projects h2::before {
-            content: "📁";
-        }
+        .contact-info h2::before { content: "📞"; }
+        .skills h2::before { content: "💻"; }
+        .education h2::before { content: "🎓"; }
+        .languages h2::before { content: "🌍"; }
+        .interests h2::before { content: "✨"; }
+        .career h2::before { content: "🎯"; }
+        .experience h2::before { content: "💼"; }
+        .projects h2::before { content: "📁"; }
 
         .list {
             list-style: none;
-            padding: 0;
+            padding-left: 0;
         }
 
         .list li {
-            margin-bottom: 10px;
+            margin-bottom: 3px;
+            font-size: 11px;
         }
 
         .list li::before {
             content: "• ";
             color: #555;
-            font-size: 18px;
+            font-size: 12px;
         }
 
         .project {
-            margin-bottom: 15px;
+            margin-bottom: 6px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3px;
         }
 
         .project-title {
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .live-link {
+            font-size: 11px;
+            color: #0077cc;
+            text-decoration: underline;
         }
 
         .highlight {
+            font-size: 11px;
             color: #555;
-            font-size: 14px;
-            line-height: 1.5;
+            margin-bottom: 3px;
         }
 
         .contact-info a {
             color: #555;
-            text-decoration: none;
-            display: block;
-            margin: 5px 0;
+            text-decoration: underline;
+            font-size: 11px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 8px;
+            margin-top: 2px;
         }
 
         .icon::before {
             content: "★ ";
             color: #555;
-            margin-right: 5px;
+            margin-right: 3px;
+        }
+
+        .career p {
+            font-size: 11px; /* Career Objective ka font size baki sab ke barabar kiya */
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #fff;
+            }
+            .container {
+                max-width: 100%;
+                margin: 0;
+                padding: 5px;
+                box-shadow: none;
+            }
+            .main {
+                display: flex;
+                padding: 8px;
+                gap: 8px;
+                page-break-inside: avoid;
+            }
+            .left-column {
+                width: 35%;
+                border-right: 1px solid #eee;
+            }
+            .right-column {
+                width: 65%;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+            .header {
+                background: #333 !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            .career p {
+                font-size: 11px; /* Print mein bhi same font size */
+            }
+            @page {
+                size: A4;
+                margin: 0mm;
+            }
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="header">
             <h1>Amit Mehta</h1>
-            <p>Frontend & Backend Developer | Team Lead</p>
+            <p>Frontend Developer | Team Lead</p>
         </div>
-
         <div class="main">
-            <!-- Left Column -->
             <div class="left-column">
                 <div class="section contact-info">
                     <h2>Contact Info</h2>
                     <p class="highlight">+91-7973671153</p>
-                    <p class="highlight"> <a href="mailto:amitmehta1128@gmail.com">amitmehta1128@gmail.com</a></p>
+                    <p class="highlight"><a href="mailto:amitmehta1128@gmail.com">amitmehta1128@gmail.com</a></p>
                     <p class="highlight">Abohar, Punjab</p>
-                    <p class="highlight"><a href="https://github.com/amit-mehta28" target="_blank">GitHub</a></p>
-                    <p class="highlight"><a href="https://www.linkedin.com/in/amitmehta028" target="_blank">LinkedIn</a>
-                    </p>
+                    <div class="social-links">
+                        <p class="highlight"><a href="https://github.com/amit-mehta28" target="_blank">GitHub</a></p>
+                        <p class="highlight"><a href="https://www.linkedin.com/in/amitmehta028" target="_blank">LinkedIn</a></p>
+                    </div>
                 </div>
-
                 <div class="section skills">
                     <h2>Skills</h2>
+                    <p><strong>Frontend:</strong></p>
                     <ul class="list">
-                        <li>HTML, CSS, JavaScript, TypeScript</li>
-                        <li>React.js, Next.js, Tailwind CSS</li>
-                        <li>Node.js, Express.js, MongoDB, Prisma</li>
-                        <li>Git, Bitbucket, Postman, Jira, Vercel</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React.js, Next.js, TypeScript</li>
+                        <li>Tailwind CSS, Redux Toolkit</li>
+                        <li>React Native (Basic)</li>
+                    </ul>
+                    <p><strong>Tools:</strong></p>
+                    <ul class="list">
+                        <li>Git, Bitbucket, Postman</li>
+                        <li>Jira, Clickup, Vercel</li>
+                    </ul>
+                    <p><strong>Basic Backend:</strong></p>
+                    <ul class="list">
+                        <li>Node.js, Express.js</li>
+                        <li>MongoDB, Prisma</li>
                     </ul>
                 </div>
-
                 <div class="section education">
                     <h2>Education</h2>
-                    <p class="highlight"><strong>Master of Computer Applications (MCA)</strong><br>Chandigarh University
-                        (pursuing)
-                    </p>
-                    <p class="highlight"><strong>Bachelor of Computer Applications (BCA)</strong><br>DAV College, Abohar
-                        (2019 - 2022)
-                    </p>
+                    <p class="highlight"><strong>Master of Computer Applications (MCA)</strong><br>Chandigarh University (Pursuing)</p>
+                    <p class="highlight"><strong>Bachelor of Computer Applications (BCA)</strong><br>DAV College, Abohar (2019 - 2022)</p>
                 </div>
-
                 <div class="section languages">
                     <h2>Languages</h2>
                     <ul class="list">
@@ -201,71 +250,66 @@
                         <li>Punjabi</li>
                     </ul>
                 </div>
-
                 <div class="section interests">
                     <h2>Interests</h2>
                     <ul class="list">
-                        <li>Web Development</li>
                         <li>Exploring New Technologies</li>
-                        <li>Open-Source Contributions</li>
+                        <li>Teaching & Mentorship in Tech</li>
+                        <li>Technical Blogging</li>
                     </ul>
                 </div>
             </div>
-
-            <!-- Right Column -->
             <div class="right-column">
                 <div class="section career">
                     <h2>Career Objective</h2>
-                    <p>Highly skilled software developer with over 2.5 years of experience specializing in frontend and
-                        backend development. Proven track record of delivering high-quality, scalable web applications.
-                        Adept at leading teams, optimizing codebases, and ensuring smooth project execution.</p>
+                    <p>Highly skilled frontend developer with over 2.5 years of experience specializing in creating dynamic and responsive web interfaces. Possessing a foundational understanding of backend technologies, I collaborate effectively with backend teams to deliver complete and scalable web solutions.</p>
                 </div>
-
                 <div class="section experience">
                     <h2>Work Experience</h2>
-                    <p><strong>Full Stack Developer & Team Lead</strong><br>Mad Brains Technologies LLP | Aug 2022 -
-                        Present</p>
+                    <p><strong>Frontend Developer & Team Lead</strong><br>Mad Brains Technologies LLP | Aug 2022 - Present</p>
                     <ul class="list">
-                        <li>Managed a team of developers and reviewed code to ensure high-quality standards.</li>
-                        <li>Developed and maintained scalable, SEO-optimized web applications.</li>
-                        <li>Collaborated with stakeholders to translate business requirements into technical solutions.
-                        </li>
+                        <li>Managed a team of frontend developers and reviewed code to ensure high-quality, responsive designs.</li>
+                        <li>Developed and maintained SEO-optimized web interfaces with a focus on user experience.</li>
+                        <li>Collaborated with backend teams to integrate APIs and ensure seamless functionality.</li>
                     </ul>
                 </div>
-
                 <div class="section projects">
                     <h2>Projects</h2>
                     <div class="project">
-                        <p class="project-title">Barbeque Nation</p>
-                        <p class="highlight icon">Built the entire frontend for an online restaurant platform, enabling
-                            table bookings, voucher purchases, and online orders.</p>
-                        <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, Zod, TypeScript,
-                            Redux Toolkit</p>
+                        <div class="project-header">
+                            <span class="project-title">Barbeque Nation</span>
+                            <a href="https://www.barbequenation.com/" class="live-link" target="_blank">Live Link</a>
+                        </div>
+                        <p class="highlight icon">Built the entire frontend for an online restaurant platform, enabling table bookings, voucher purchases, and online orders, while ensuring a smooth and responsive user experience.</p>
+                        <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, Zod, TypeScript, Redux Toolkit</p>
                     </div>
                     <div class="project">
-                        <p class="project-title">Farm-Crest</p>
-                        <p class="highlight icon">Created an SEO-optimized platform for promoting cocopeat fertilizer
-                            and farming solutions.</p>
+                        <div class="project-header">
+                            <span class="project-title">Farm-Crest</span>
+                            <a href="https://www.farm-crest.com/" class="live-link" target="_blank">Live Link</a>
+                        </div>
+                        <p class="highlight icon">Created an SEO-optimized frontend platform for promoting cocopeat fertilizer and farming solutions, resulting in improved conversion rates and enhanced user engagement.</p>
                         <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, TypeScript</p>
                     </div>
                     <div class="project">
-                        <p class="project-title">Gulfin</p>
-                        <p class="highlight icon">Designed and developed a full-stack real estate platform with advanced
-                            search and property listing functionalities.</p>
-                        <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, Prisma, TypeScript
-                        </p>
+                        <div class="project-header">
+                            <span class="project-title">Gulfin</span>
+                            <a href="https://gulfin.in/" class="live-link" target="_blank">Live Link</a>
+                        </div>
+                        <p class="highlight icon">Developed the frontend of a real estate platform featuring advanced search and property listing functionalities, collaborating on backend integrations while ensuring optimal performance and intuitive design.</p>
+                        <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, Prisma, TypeScript</p>
                     </div>
                     <div class="project">
-                        <p class="project-title">Template Studio</p>
-                        <p class="highlight icon">Led the development of a marketplace for uploading and selling design
-                            templates, including user authentication and payment systems.</p>
-                        <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, Prisma, Express.js,
-                            Firebase</p>
+                        <div class="project-header">
+                            <span class="project-title">Template Studio</span>
+                            <a href="https://templatestudio.ai/" class="live-link" target="_blank">Live Link</a>
+                        </div>
+                        <p class="highlight icon">Led the development of a marketplace's frontend for uploading and selling design templates, including integration with backend services for authentication and payments, while delivering a seamless user experience and robust security.</p>
+                        <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, Prisma, Express.js, Firebase</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>
