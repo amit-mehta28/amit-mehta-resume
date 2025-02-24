@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -81,14 +82,37 @@
             color: #555;
         }
 
-        .contact-info h2::before { content: "📞"; }
-        .skills h2::before { content: "💻"; }
-        .education h2::before { content: "🎓"; }
-        .languages h2::before { content: "🌍"; }
-        .interests h2::before { content: "✨"; }
-        .career h2::before { content: "🎯"; }
-        .experience h2::before { content: "💼"; }
-        .projects h2::before { content: "📁"; }
+        .contact-info h2::before {
+            content: "📞";
+        }
+
+        .skills h2::before {
+            content: "💻";
+        }
+
+        .education h2::before {
+            content: "🎓";
+        }
+
+        .languages h2::before {
+            content: "🌍";
+        }
+
+        .interests h2::before {
+            content: "✨";
+        }
+
+        .career h2::before {
+            content: "🎯";
+        }
+
+        .experience h2::before {
+            content: "💼";
+        }
+
+        .projects h2::before {
+            content: "📁";
+        }
 
         .list {
             list-style: none;
@@ -153,7 +177,7 @@
         }
 
         .career p {
-            font-size: 11px; /* Career Objective ka font size baki sab ke barabar kiya */
+            font-size: 11px;
         }
 
         @media print {
@@ -162,36 +186,44 @@
                 padding: 0;
                 background-color: #fff;
             }
+
             .container {
                 max-width: 100%;
                 margin: 0;
                 padding: 5px;
                 box-shadow: none;
             }
+
             .main {
                 display: flex;
                 padding: 8px;
                 gap: 8px;
                 page-break-inside: avoid;
             }
+
             .left-column {
                 width: 35%;
                 border-right: 1px solid #eee;
             }
+
             .right-column {
                 width: 65%;
             }
+
             .section {
                 page-break-inside: avoid;
             }
+
             .header {
                 background: #333 !important;
                 -webkit-print-color-adjust: exact;
                 color-adjust: exact;
             }
+
             .career p {
-                font-size: 11px; /* Print mein bhi same font size */
+                font-size: 11px;
             }
+
             @page {
                 size: A4;
                 margin: 0mm;
@@ -199,6 +231,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -214,7 +247,8 @@
                     <p class="highlight">Abohar, Punjab</p>
                     <div class="social-links">
                         <p class="highlight"><a href="https://github.com/amit-mehta28" target="_blank">GitHub</a></p>
-                        <p class="highlight"><a href="https://www.linkedin.com/in/amitmehta028" target="_blank">LinkedIn</a></p>
+                        <p class="highlight"><a href="https://www.linkedin.com/in/amitmehta028"
+                                target="_blank">LinkedIn</a></p>
                     </div>
                 </div>
                 <div class="section skills">
@@ -239,8 +273,14 @@
                 </div>
                 <div class="section education">
                     <h2>Education</h2>
-                    <p class="highlight"><strong>Master of Computer Applications (MCA)</strong><br>Chandigarh University (Pursuing)</p>
-                    <p class="highlight"><strong>Bachelor of Computer Applications (BCA)</strong><br>DAV College, Abohar (2019 - 2022)</p>
+                    <p class="highlight"><strong>Master of Computer Applications (MCA)</strong><br>Chandigarh University
+                        (Pursuing)</p>
+                    <p class="highlight"><strong>Bachelor of Computer Applications (BCA)</strong><br>DAV College, Abohar
+                        (2019 - 2022) </p>
+                    <p class="highlight"><strong>Senior Secondary (12th Grade)</strong><br>Govt. Model Senior Secondary
+                        School, Abohar (2019) - 70%</p>
+                    <p class="highlight"><strong>Matriculation</strong><br>Shivalik Public Senior Secondary School, Abohar
+                        (2017) - 85.23%</p>
                 </div>
                 <div class="section languages">
                     <h2>Languages</h2>
@@ -262,54 +302,95 @@
             <div class="right-column">
                 <div class="section career">
                     <h2>Career Objective</h2>
-                    <p>Highly skilled frontend developer with over 2.5 years of experience specializing in creating dynamic and responsive web interfaces. Possessing a foundational understanding of backend technologies, I collaborate effectively with backend teams to deliver complete and scalable web solutions.</p>
+                    <p>A proficient frontend developer with over 2.5 years of experience, specializing in crafting
+                        dynamic, responsive, and user-centric web interfaces. Leveraging a solid foundation in backend
+                        technologies, I excel at collaborating with cross-functional teams to deliver scalable,
+                        high-quality web solutions. I am committed to driving innovation and enhancing user experiences
+                        through cutting-edge development practices.</p>
                 </div>
                 <div class="section experience">
                     <h2>Work Experience</h2>
-                    <p><strong>Frontend Developer & Team Lead</strong><br>Mad Brains Technologies LLP | Aug 2022 - Present</p>
+                    <p><strong>Frontend Developer & Team Lead</strong><br>Mad Brains Technologies LLP | Aug 2022 -
+                        Present</p>
                     <ul class="list">
-                        <li>Managed a team of frontend developers and reviewed code to ensure high-quality, responsive designs.</li>
+                        <li>Managed a team of frontend developers and reviewed code to ensure high-quality, responsive
+                            designs.</li>
                         <li>Developed and maintained SEO-optimized web interfaces with a focus on user experience.</li>
                         <li>Collaborated with backend teams to integrate APIs and ensure seamless functionality.</li>
                     </ul>
                 </div>
                 <div class="section projects">
                     <h2>Projects</h2>
+
                     <div class="project">
                         <div class="project-header">
                             <span class="project-title">Barbeque Nation</span>
                             <a href="https://www.barbequenation.com/" class="live-link" target="_blank">Live Link</a>
                         </div>
-                        <p class="highlight icon">Built the entire frontend for an online restaurant platform, enabling table bookings, voucher purchases, and online orders, while ensuring a smooth and responsive user experience.</p>
-                        <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, Zod, TypeScript, Redux Toolkit</p>
+                        <p class="highlight icon">
+                            Designed and built the entire frontend for <strong>Barbeque Nation</strong>, one of India’s
+                            leading restaurant chains, focusing on a seamless digital experience. Developed features
+                            like online table reservations, voucher purchases, and food ordering while ensuring a
+                            high-performance, responsive interface across all devices.
+                        </p>
+                        <p class="highlight">
+                            <strong>Technologies:</strong> Next.js, Tailwind CSS, Zod, TypeScript, Redux Toolkit
+                        </p>
                     </div>
+
                     <div class="project">
                         <div class="project-header">
                             <span class="project-title">Farm-Crest</span>
                             <a href="https://www.farm-crest.com/" class="live-link" target="_blank">Live Link</a>
                         </div>
-                        <p class="highlight icon">Created an SEO-optimized frontend platform for promoting cocopeat fertilizer and farming solutions, resulting in improved conversion rates and enhanced user engagement.</p>
-                        <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, TypeScript</p>
+                        <p class="highlight icon">
+                            Developed a high-performance, SEO-optimized website for <strong>Farm-Crest</strong>, an
+                            agricultural brand specializing in cocopeat fertilizers and farming solutions. The platform
+                            effectively promotes products, enhances customer engagement, and contributes to higher
+                            conversion rates through an intuitive UI/UX.
+                        </p>
+                        <p class="highlight">
+                            <strong>Technologies:</strong> Next.js, Tailwind CSS, TypeScript
+                        </p>
                     </div>
+
                     <div class="project">
                         <div class="project-header">
                             <span class="project-title">Gulfin</span>
                             <a href="https://gulfin.in/" class="live-link" target="_blank">Live Link</a>
                         </div>
-                        <p class="highlight icon">Developed the frontend of a real estate platform featuring advanced search and property listing functionalities, collaborating on backend integrations while ensuring optimal performance and intuitive design.</p>
-                        <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, Prisma, TypeScript</p>
+                        <p class="highlight icon">
+                            Built the frontend for <strong>Gulfin</strong>, a real estate platform that enables users to
+                            search, filter, and explore property listings with advanced search functionalities.
+                            Collaborated closely with the backend team to integrate APIs, optimize performance, and
+                            deliver a smooth, user-friendly experience for property buyers and sellers.
+                        </p>
+                        <p class="highlight">
+                            <strong>Technologies:</strong> Next.js, Tailwind CSS, Prisma, TypeScript
+                        </p>
                     </div>
+
                     <div class="project">
                         <div class="project-header">
                             <span class="project-title">Template Studio</span>
                             <a href="https://templatestudio.ai/" class="live-link" target="_blank">Live Link</a>
                         </div>
-                        <p class="highlight icon">Led the development of a marketplace's frontend for uploading and selling design templates, including integration with backend services for authentication and payments, while delivering a seamless user experience and robust security.</p>
-                        <p class="highlight"><strong>Technologies:</strong> Next.js, Tailwind CSS, Prisma, Express.js, Firebase</p>
+                        <p class="highlight icon">
+                            Led the frontend development of <strong>Template Studio</strong>, an online marketplace for
+                            digital design templates. The platform allows designers to upload, showcase, and sell their
+                            templates. Integrated authentication, payment systems, and backend services to ensure secure
+                            transactions and a seamless user experience.
+                        </p>
+                        <p class="highlight">
+                            <strong>Technologies:</strong> Next.js, Tailwind CSS, Prisma, Express.js, Firebase
+                        </p>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>
 </body>
+
 </html>
