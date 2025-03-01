@@ -28,7 +28,7 @@
             background: #fff;
             padding: 6px;
             border: 1px solid gray;
-            box-shadow: 0 3px 10px rgb(0,0,0,0.2);
+            box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
         }
 
         .header {
@@ -225,6 +225,25 @@
                 margin: 0mm;
             }
         }
+
+
+        @media (max-width:600px) {
+            .container {
+                padding: 0px;
+                border: none;
+            }
+
+            .highlight a {
+                display: block;
+                word-break: break-all;
+            }
+
+            .main {
+                /* display: flex;
+                padding: 8px; */
+                gap: 0px;
+            }
+        }
     </style>
 </head>
 
@@ -347,7 +366,7 @@
 
                     <div class="project">
                         <div class="project-header">
-                            <span class="project-title">Farm-Crest</span>
+                            <span class="project-title">Farm Crest</span>
                             <a href="https://www.farm-crest.com/" class="live-link" target="_blank">Live Link</a>
                         </div>
                         <p class="highlight icon">
